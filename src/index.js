@@ -79,6 +79,9 @@ function format(s) {
 
 module.exports = {
   initialize: function(gaTrackingID, options) {
+    console.log("\n======== mavis ========== \n");
+    console.log(require('./components/OutboundLink.jsx'));
+
     if (!gaTrackingID) {
       warn('gaTrackingID is required in initialize()');
       return;
@@ -290,6 +293,10 @@ module.exports = {
       // continues to work as expected
       setTimeout(hitCallback, 0);
     }
+  },
+
+  OutboundLink: function (args) {
+    // console.log(require('./components/OutboundLink.jsx'));
   }
 };
 
